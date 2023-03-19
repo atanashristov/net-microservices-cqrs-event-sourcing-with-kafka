@@ -237,3 +237,31 @@ Copy and paste the entire configuration section as "Post.Query.Api" and give it 
       },
 ...
 ```
+
+## Section 3: Messages
+
+In CQRS and Event Sourcing they are 3 important message types:
+
+- Command
+- Event
+- Queries
+
+Command:
+
+```md
+A combination of expressed intent.
+Describes an action that you want to be performed.
+It contains the information needed to undertake the desired action.
+```
+
+Commands are always named with a verb: `NewPostCommand`, `LikePostCommand`, etc.
+
+Event:
+
+```md
+Describe something that ocurred in the application.
+A typical source of the event is the aggregate.
+When something important happens in the aggregate, it will raise an event.
+```
+
+Events are named with past-particle verb: `PostCreatedEvent`, `PostLikedEvent`, `CommentAddedEvent`, etc.
